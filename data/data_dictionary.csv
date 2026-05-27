@@ -1,0 +1,31 @@
+Variable,Type,Domain,Description,Reference_Value
+respondent_id,Integer,Identification,Unique identifier for each individual commuter,NA
+row_id,Integer,Identification,Unique row identifier for the unified long-form dataset,NA
+is_sp,Binary,Design,Indicator: 1 if row is an SP choice card; 0 if row is actual RP behavior,0 = RP; 1 = SP
+choice_situation_id,Integer,Design,Tracks specific choice card number (0 for RP; 1-15 for SP sets),0 = RP
+choice,Integer,Dependent,Chosen alternative code,1=Walk; 2=Bicycle; 3=Private_Vehicle; 4=IPT; 5=Bus; 6=Drop_off
+av_walk,Binary,Availability,Availability of Walk option (Universal),1 = Always Available
+av_bike,Binary,Availability,Availability of Bicycle option,0 = No bike owned/accessible; 1 = Available
+av_pvt,Binary,Availability,Availability of Personal Vehicle (Car/Two-wheeler),0 = No vehicle owned; 1 = Available
+av_ipt,Binary,Availability,Availability of IPT (Auto/Taxi/Ride-hailing),1 = Always Available
+av_bus,Binary,Availability,Availability of BEST Bus,1 = Always Available
+av_drop,Binary,Availability,Availability of Drop-off alternative,0 = No household driver/vehicle; 1 = Available
+tt_walk,Numeric,Attribute,Access travel time for walking (minutes),Continuous
+tt_bike,Numeric,Attribute,Access travel time for bicycle (minutes),Continuous
+tt_pvt,Numeric,Attribute,Access travel time for private vehicle (minutes),Continuous
+tt_ipt,Numeric,Attribute,Access travel time for IPT (minutes),Continuous
+tt_bus,Numeric,Attribute,Access travel time for BEST bus (minutes),Continuous
+tt_drop,Numeric,Attribute,Access travel time for drop-off option (minutes),Continuous
+tc_bike,Numeric,Attribute,Access travel cost for bicycle (maintenance/parking INR),Continuous
+tc_pvt,Numeric,Attribute,Access travel cost for private vehicle (fuel/parking INR),Continuous
+tc_ipt,Numeric,Attribute,Access travel cost for IPT (fare INR),Continuous
+tc_bus,Numeric,Attribute,Access travel cost for BEST bus (fare INR),Continuous
+tc_drop,Numeric,Attribute,Access travel cost for drop-off (fuel overhead INR),Continuous
+comfort_bus,Integer,Attribute,Comfort level rating on bus (crowding profile),1 = Poor; 2 = Average; 3 = Good
+infra_bike,Binary,Attribute,Presence of continuous, segregated cycle track,0 = Absent; 1 = Present
+infra_bus,Binary,Attribute,Presence of well-designed bus shelter at origin/hub,0 = Absent; 1 = Present
+safety_street,Binary,Attribute,Presence of street lighting and CCTV coverage on access route,0 = Absent; 1 = Present
+weather,Integer,Context,Current/Stated seasonal weather state,1 = Monsoon; 2 = Summer; 3 = Winter
+land_use,Integer,Context,Predominant land use characteristic around target station,1 = Commercial; 2 = Residential; 3 = Mixed; 4 = Industrial
+age_cohort,Integer,Demographic,Age segment profile of individual,1 = Young Millennial; 2 = Mid Age; 3 = Senior Citizen
+inc_level,Integer,Demographic,Monthly Household Income tier,1 = Low (<50k); 2 = Mid (50k-150k); 3 = High (>150k)
