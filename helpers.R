@@ -98,7 +98,11 @@ generate_synthetic_data <- function(num_respondents = 10, seed = NULL) {
                 sum(exp(c(u_walk_rp, u_bike_rp, u_pvt_rp, u_ipt_rp, u_bus_rp, u_drop_rp)))
 
     rp_row$choice <- sample(1:6, 1, prob = probs_rp)
-    
+
+    # Dynamic Label Vector Mapping
+    mode_labels <- c("Walk", "Bicycle", "Private_Vehicle", "IPT", "Bus", "Drop_off")
+    rp_row$choice_label <- mode_labels[rp_row$choice]
+
     # Enforce strict ordering to match dictionary columns
     rp_row <- rp_row %>% select(all_of(expected_vars))
     master_data <- bind_rows(master_data, rp_row)
@@ -159,7 +163,11 @@ generate_synthetic_data <- function(num_respondents = 10, seed = NULL) {
                   sum(exp(c(u_walk_sp, u_bike_sp, u_pvt_sp, u_ipt_sp, u_bus_sp, u_drop_sp)))
 
       sp_row$choice <- sample(1:6, 1, prob = probs_sp)
-      
+
+# Dynamic Label Vector Mapping
+      mode_labels <- c("Walk", "Bicycle", "Private_Vehicle", "IPT", "Bus", "Drop_off")
+      sp_row$choice_label <- mode_labels[sp_row$choice]
+            
       # Enforce strict ordering to match dictionary columns
       sp_row <- sp_row %>% select(all_of(expected_vars))
       master_data <- bind_rows(master_data, sp_row)

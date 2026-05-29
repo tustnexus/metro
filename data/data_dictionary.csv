@@ -32,3 +32,12 @@ land_use,Integer,Context,Predominant land use characteristic around target stati
 age_cohort,Integer,Demographic,Age segment profile of individual,1 = Young Millennial; 2 = Mid Age; 3 = Senior Citizen
 inc_level,Integer,Demographic,Monthly Household Income tier,1 = Low (<50k); 2 = Mid (50k-150k); 3 = High (>150k)
 choice,Integer,Dependent,Chosen alternative code,1=Walk; 2=Bicycle; 3=Private_Vehicle; 4=IPT; 5=Bus; 6=Drop_off
+choice_label,Character,Dependent,Text label of the chosen alternative,Walk; Bicycle; Private_Vehicle; IPT; Bus; Drop_off
+
+
+
+
+
+
+
+

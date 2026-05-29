@@ -24,6 +24,13 @@ Published in:
 
 > Proceedings of the Eastern Asia Society for Transportation Studies (EASTS), Vol. 15, 2025.
 
+### Reference Paper
+
+Sangameshwar, M. B., Vaidya, M., & Goswami, A. K. (2025).  
+*What are the likely access modes to future metro rail stations? A stated preference choice experiment of Mumbai commuters.*
+
+[Read the paper (PDF)](https://easts.info/on-line/proceedings/vol.15/pdf/C_PP4221.pdf)
+
 ---
 
 ## Research Objective
@@ -59,56 +66,51 @@ metro/
 ├── data/
 │   └── data_dictionary.csv
 ├── output/
+│   ├── Respondent_Scenario.png
+│   ├── Same_Scenario_With_Labels.png
+│   └── synthetic_data_compared_to_research_paper.png
 ├── analysis.R
 ├── helpers.R
-└── metro.Rproj
+├── metro.Rproj
+├── README.md
+└── state.md
 ```
 
 ### File Descriptions
 
 #### `analysis.R`
 
-Main orchestration script.
+Main execution script for the project.
 
 Responsibilities include:
 
-* loading libraries
-* sourcing helper functions
-* generating or loading datasets
-* validating schema structure
-* defining model specifications
-* running future estimations
+* generating synthetic RP-SP observations
+* validating dataset structure
+* performing calibration diagnostics
+* producing visualizations
+* preparing data for future Apollo estimation
 
 #### `helpers.R`
 
-Contains reusable helper functions including:
+Contains reusable functions for:
 
-* synthetic RP-SP data generation
-* utility helpers
-* missing value diagnostics
-* formatting functions
-* future modeling utilities
+* synthetic respondent generation
+* utility calculations
+* mode choice simulation
+* validation utilities
+* reporting support
 
 #### `data/data_dictionary.csv`
 
-Canonical schema reference for the RP-SP dataset.
+Defines the canonical schema used throughout the project, including variable names, coding conventions, and attribute descriptions.
 
-Will eventually define:
+#### `state.md`
 
-* variable names
-* variable descriptions
-* data types
-* coding conventions
-* allowable categorical values
+Project notebook containing implementation status, design decisions, calibration findings, and upcoming work items.
 
 #### `output/`
 
-Stores generated outputs including:
-
-* model estimation results
-* plots
-* diagnostics
-* exported tables
+Stores generated figures and calibration diagnostics used during model development and validation.
 
 ---
 
@@ -155,21 +157,28 @@ install.packages("apollo")
 
 Implemented:
 
-* project scaffolding
+* project architecture and repository structure
 * synthetic RP-SP dataset generator
-* availability constraints
-* schema verification checks
-* exploratory infrastructure
+* mode availability constraints
+* utility-based choice simulation
+* multi-seed stability testing
+* cross-attribute sensitivity validation
+* calibration diagnostics against published SP mode shares
+* visualization and reporting infrastructure
+
+In Progress:
+
+* calibration of alternative-specific constants (ASCs)
+* utility specification refinement
 
 Planned:
 
-* Apollo estimation integration
-* utility specification
-* likelihood functions
-* RP-SP scale estimation
-* validation diagnostics
-* policy scenario simulation
-* visualization layer
+* Apollo integration
+* joint RP-SP likelihood estimation
+* scale parameter estimation
+* model validation against published coefficients
+* policy scenario analysis
+
 
 ---
 
@@ -198,6 +207,7 @@ Potential future extensions include:
 * Real Mumbai survey calibration
 
 ---
+
 
 ## Disclaimer
 

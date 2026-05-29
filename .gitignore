@@ -1,4 +1,28 @@
-.Rproj.user
-.Rhistory
+# R session files
 .RData
+.Rhistory
 .Ruserdata
+
+# RStudio
+.Rproj.user/
+
+# Temporary reports
+comments-*.md
+
+# Development notes
+contents.txt
+state_last.md
+
+# Archive area
+archive/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+*.tmp
